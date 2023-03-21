@@ -1,29 +1,151 @@
+@font-face {
+	font-family: "MyWebFont";
+	src: url("../../../public/assets/Impostograph-Regular.woff") format("woff");
+}
 .container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(12, 13, 31);
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #05050f;
+	background-image: url("../../../public/assets/bg.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .formContainer {
-  width: 400px;
-  margin: 0 auto 0 auto;
-  padding: 32px;
-  background: rgb(169, 177, 177);
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 28px;
+	width: 500px;
+	margin: 0 auto 0 auto;
+	padding: 32px;
+	background: #05050f;
+	border-radius: 6px;
+	border: 4.5px double whitesmoke;
+	color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 28px;
+	z-index: 2;
+}
+.title {
+	font-family: "MyWebFont";
+	font-size: 70px;
 }
 .input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid rgb(12, 13, 31);
-  font-size: 0.9rem;
+	width: 100%;
+	padding: 12px;
+	border-radius: 6px;
+	border: 1px solid rgb(12, 13, 31);
+	font-size: 0.9rem;
 }
 .input option {
-  margin-top: 20px;
+	margin-top: 20px;
+}
+.btn-secondary {
+	background-color: #15153e !important;
+}
+.avatar_container,
+.avatar_wrapper {
+	height: 100%;
+	width: 100%;
+}
+.avatar_container {
+	position: absolute;
+}
+.avatar_wrapper {
+	position: relative;
+}
+.avatar {
+	width: 110px;
+	height: 140px;
+	position: absolute;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#av1 {
+	background-image: url("../../../public/assets/av1.png");
+	left: 20%;
+	transform: rotate(-10deg);
+	animation: UpDown 3s linear infinite;
+}
+#av2 {
+	background-image: url("../../../public/assets/av2.png");
+	top: 30%;
+	right: 10%;
+	animation: spin 7s linear infinite;
+}
+#av3 {
+	background-image: url("../../../public/assets/av3.png");
+	bottom: 40%;
+	left: 6%;
+	transform: rotate(-20deg);
+	animation: rev-spin 8s linear infinite;
+}
+#av4 {
+	background-image: url("../../../public/assets/av4.png");
+	right: 20%;
+	transform: rotate(20deg) scaleX(-1);
+	animation: bottom-UpDown 6s linear infinite;
+}
+#av5 {
+	background-image: url("../../../public/assets/av5.png");
+	bottom: 10%;
+	left: 20%;
+	animation: rev-spin 6s linear infinite;
+}
+#av6 {
+	background-image: url("../../../public/assets/av6.png");
+	top: 5%;
+	right: 20%;
+	background-size: contain;
+	animation: diagonal-move-anim 3s linear infinite alternate;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes rev-spin {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes UpDown {
+	0% {
+		top: 10%;
+	}
+	50% {
+		top: 15%;
+	}
+	100% {
+		top: 10%;
+	}
+}
+@keyframes bottom-UpDown {
+	0% {
+		bottom: 10%;
+	}
+	50% {
+		bottom: 20%;
+	}
+	100% {
+		bottom: 10%;
+	}
+}
+@keyframes diagonal-move-anim {
+	0% {
+		transform: translate(-25%, 25%) rotate(-20deg);
+	}
+
+	100% {
+		transform: translate(0, 0) rotate(-20deg);
+	}
 }
