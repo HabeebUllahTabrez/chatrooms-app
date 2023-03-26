@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 .chatbox {
-	max-width: 1200px;
-	margin: auto;
 	background-color: #8f97a4;
 	border: solid 5px #1f2021;
 	border-radius: 30px;
-	padding: 30px;
+	padding: 35px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-height: calc(100% - 100px);
+	height: calc(100% - 50px);
+	width: calc(100% - 250px);
+	max-width: 1200px;
 }
 .tablet_button {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	background-color: #f6f6f7;
 	border: solid 5px #585c62;
 	border-radius: 50%;
@@ -25,14 +25,15 @@
 	border-radius: 20px;
 	padding: 10px;
 	width: 94%;
+	height: 100%;
 }
 .chatContainer {
 	display: flex;
 	background-color: #abc8e6;
 	border-radius: 10px;
 	width: 100%;
-	padding: 10px 20px;
-	padding-top: 30px;
+	padding: 15px;
+	height: 100%;
 }
 .chatContainer > div:last-child {
 	width: 80%;
@@ -41,10 +42,12 @@
 /* Room and users component */
 .roomAndUsersColumn {
 	border-right: 0.5px solid whitesmoke;
+	height: 100%;
 	width: 20%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 }
 .roomTitle {
 	margin-bottom: 60px;
@@ -73,17 +76,18 @@
 	text-align: center;
 	margin-bottom: 12px;
 }
-
+.roomAndUsersColumn > div:last-child {
+	width: 100%;
+}
 .roomAndUsersColumn button {
-	width: calc(100% - 20px);
-	margin-bottom: 20px;
+	width: calc(100% - 5px);
 }
 
 /* Messages */
 .messagesColumn {
-	height: 85vh;
+	height: calc(100% - 70px);
 	overflow: auto;
-	padding: 10px 15px;
+	padding: 0 15px;
 }
 .message {
 	background: whitesmoke;
@@ -114,7 +118,7 @@
 
 /* Message input and button */
 .sendMessageContainer {
-	padding: 16px 20px 20px 16px;
+	padding: 0 20px 0 16px;
 	width: 100%;
 }
 .sendMessageContainer button {
